@@ -3,8 +3,7 @@
 
 import { motion } from 'framer-motion';
 import { IconType } from 'react-icons';
-import { FaBuilding, FaDatabase, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { SiJavascript, SiSupabase, SiPodman, SiSpringboot } from 'react-icons/si';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import Image from 'next/image';
 
 type ProjectLink = {

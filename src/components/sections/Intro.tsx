@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { navLinks } from '../../constants/navLinks'
 
 export default function Intro() {
-    const aboutLink = navLinks.find(link => link.name === 'About')?.href || '#about'
+    const aboutLink = navLinks.find(link => link.name === 'About')?.hash || '#about'
   return (
     <SectionWrapper 
       id="intro" 
@@ -43,7 +43,7 @@ export default function Intro() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-lg md:text-xl font-light text-gray-600 dark:text-gray-300 mt-8 max-w-2xl mx-auto"
         >
-          Designer & developer creating elegant digital experiences. Let's build something amazing together.
+          Designer & developer creating elegant digital experiences. Let&apos;s build something amazing together.
         </motion.p>
         
         <motion.div

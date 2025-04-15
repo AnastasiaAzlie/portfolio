@@ -40,7 +40,7 @@ export default function About() {
             viewport={{ once: true }}
             >
             <h3 className="text-2xl font-bold mb-4 dark:text-white text-center">
-                Hi, I'm Anastasia! :D
+                Hi, I&apos;m Anastasia! :D
             </h3>
             
             <div className="space-y-4 text-lg text-gray-600 dark:text-gray-300 text-justify">
@@ -56,15 +56,15 @@ export default function About() {
   )
 }
 
-function TechBadge({ icon, name }: { icon: React.ReactNode; name: string }) {
-  return (
-    <motion.div
-      className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-700 rounded-full shadow-sm"
-      whileHover={{ y: -2 }}
-      transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-    >
-      {icon}
-      <span className="text-sm font-medium dark:text-white">{name}</span>
-    </motion.div>
-  )
-}
+// // function TechBadge({ icon, name }: { icon: React.ReactNode; name: string }) {
+// //   return (
+// //     <motion.div
+// //       className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-700 rounded-full shadow-sm"
+// //       whileHover={{ y: -2 }}
+// //       transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+// //     >
+// //       {icon}
+// //       <span className="text-sm font-medium dark:text-white">{name}</span>
+// //     </motion.div>
+// //   )
+// }

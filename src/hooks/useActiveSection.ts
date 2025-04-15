@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
-import { navLinks } from '../constants/navLinks'
 
 export function useActiveSection() {
   const [activeSection, setActiveSection] = useState('Home')
