@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --background-pattern: transparent; /* New variable for pattern */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #00091d; /* Base dark color */
+    --foreground: #ededed;
+    --background-pattern: radial-gradient(#ffffff33 1px, transparent 1px); /* Dot pattern */
+  }
+}
+
+body {
+  background-color: var(--background);
+  background-image: var(--background-pattern);
+  background-size: 20px 20px;
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif; /* Updated to use your font variable */
+  position: relative; /* For pseudo-element positioning */
+}
+
+/* Optional: Add the colored radial gradient as an overlay */
+@media (prefers-color-scheme: dark) {
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(at right top, rgb(79, 29, 88), transparent 40%), 
+                radial-gradient(at left bottom, rgb(11, 32, 100), transparent 40%);
+    z-index: -1;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+}
